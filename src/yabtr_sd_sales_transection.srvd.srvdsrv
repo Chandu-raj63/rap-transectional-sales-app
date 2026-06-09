@@ -1,0 +1,7 @@
+@EndUserText.label: 'sd; sales app treansection'
+define service Yabtr_sd_sales_transection {
+  expose yabtr_cr_so;
+  expose yabtr_ci_soit;
+  expose yabtr_i_cust;
+  expose yabtr_i_prod;
+}

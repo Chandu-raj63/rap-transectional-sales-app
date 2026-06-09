@@ -1,0 +1,31 @@
+@Metadata.layer: #CUSTOMER
+annotate entity yabtr_i_cust
+    with 
+{
+@UI.lineItem: [{position: 10, label: 'customer numner'  }]
+@UI.identification: [{position: 10, label: 'customer number'  }]
+   CustId;
+@UI.lineItem: [{position: 20, label: 'customer name'  }]
+@UI.identification: [{position: 20, label: 'customer name'  }]   
+   Name;
+@UI.lineItem: [{position: 30, label: 'company name'  }]
+@UI.identification: [{position: 30, label: 'company name'  }]   
+   CompanyName;
+@UI.lineItem: [{position: 40, label: 'country'  }]
+@UI.identification: [{position: 40, label: 'country'  }]   
+   Country;
+@UI.lineItem: [{position: 50, label: 'city'  }]
+@UI.identification: [{position: 50, label: 'city'  }]  
+   City;
+@UI.lineItem: [{position: 60, label: 'mobile number'  }]
+@UI.identification: [{position: 60, label: 'mobile number'  }]   
+   Mobile;
+@UI.lineItem: [{position: 70, label: 'rating'  }]
+@UI.identification: [{position: 70, label: 'rating'  }]   
+   Rating;
+//   LocalLastChanged;
+//   LastChanged;
+//   LocalChangedBy;
+//   LastChangedBy;
+    
+}

@@ -1,0 +1,93 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: {
+    typeName: 'salesdetailes',
+    typeNamePlural: 'salesdetailes',
+    title: {
+        type: #STANDARD,
+        label: 'sales detailes',
+        value: 'soid'
+    },
+    description: {
+        type: #STANDARD,
+        label: 'sales detailes',
+        value: 'soid'
+    }
+}
+annotate entity yabtr_cr_so
+    with 
+{
+   @UI.facet: [
+   
+   {
+       id: 'soid',
+       purpose: #STANDARD,
+       position:10 ,
+       label: 'sales order',
+       type:#IDENTIFICATION_REFERENCE
+   },
+   
+   {  
+    id: 'custid',
+     purpose: #STANDARD ,
+     position: 20,
+     label: 'customer detailes' ,
+     type: #IDENTIFICATION_REFERENCE,
+     targetElement: '_cust'
+   
+   },
+   
+   {  
+    id: 'itemid',
+     purpose: #STANDARD ,
+     position: 30,
+     label: 'sales item detailes' ,
+     type: #LINEITEM_REFERENCE ,
+     targetElement: '_item'
+     
+   
+   }
+   
+   ]
+   
+ @UI.lineItem: [{position: 10,label: 'sales number'  }]
+ @UI.identification: [{position: 10, label: 'sales number'  }]
+ @UI.selectionField: [{position: 10}]
+ @EndUserText.label: 'sales number'
+    Soid;
+ @UI.lineItem: [{position: 20,label: 'customer'  }]
+ @UI.identification: [{position: 20, label: 'customer'  }] 
+  @UI.selectionField: [{position: 15}]
+ @EndUserText.label: 'customer'  
+    Buyer;
+ @UI.lineItem: [{position: 30,label: 'sales person'  }]
+ @UI.identification: [{position: 30, label: 'sales person'  }]  
+  @UI.selectionField: [{position: 20}]
+ @EndUserText.label: 'sales person' 
+    SalesPerson;
+ @UI.lineItem: [{position: 40,label: 'sales time'  }]
+ @UI.identification: [{position: 40, label: 'sales time'  }]   
+    SalesTimestamp;
+ @UI.lineItem: [{position: 50,label: 'sales manager'  }]
+ @UI.identification: [{position: 50, label: 'sales manager'  }]   
+    SalesManager;
+ @UI.lineItem: [{position: 60,label: 'approval time'  }]
+ @UI.identification: [{position: 60, label: 'approval time'  }]   
+    ApprovalTimestamp;
+ @UI.lineItem: [{position: 70,label: 'sys user'  }]
+ @UI.identification: [{position: 70, label: 'sys user'  }]   
+    CreatedBy;
+ @UI.lineItem: [{position: 80,label: 'sys time'  }]
+ @UI.identification: [{position: 80, label: 'sys time'  }]   
+    CreatedOn;
+ @UI.lineItem: [{position: 90,label: 'sys update user'  }]
+ @UI.identification: [{position: 90, label: 'sys update user'  }]   
+    ChangedBy;
+ @UI.lineItem: [{position: 100,label: 'sys update time'  }]
+ @UI.identification: [{position: 100, label: 'sys update time'  }]   
+    ChangedOn;
+//    Url;
+//    /* Associations */
+//    _cust;
+//    _item;
+    
+}

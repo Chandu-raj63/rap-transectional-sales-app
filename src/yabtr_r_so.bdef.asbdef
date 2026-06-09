@@ -1,0 +1,27 @@
+managed implementation in class zbp_abtr_r_so unique;
+strict ( 2 );
+
+define behavior for yabtr_r_so //alias <alias_name>
+persistent table zvkmon01_dt_so
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Soid;
+  association _item { create; }
+}
+
+define behavior for yabtr_i_soid //alias <alias_name>
+persistent table zvkmon01_dt_soit
+lock dependent by header
+authorization dependent by header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Soid, ItemId;
+  association header;
+}

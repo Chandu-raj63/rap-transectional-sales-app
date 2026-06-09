@@ -1,0 +1,82 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: {
+    typeName: 'salesitemdetailes',
+    typeNamePlural: 'salesitemdetailes',
+    title: {
+        type: #STANDARD,
+        label: 'sales item detailes',
+        value: 'itemid'
+    },
+    description: {
+        type: #STANDARD,
+        label: 'sales item detailes',
+        value: 'itemid'
+    }
+  }  
+annotate entity yabtr_ci_soit
+    with 
+{
+ 
+ @UI.facet: [
+ 
+ {
+     id: 'itemid',
+     purpose: #STANDARD,
+     position:10 ,
+     label: 'sales item detailes',
+     type:#IDENTIFICATION_REFERENCE
+     
+ },
+ 
+  {
+     id: 'prodid',
+     purpose: #STANDARD,
+     position:20 ,
+     label: 'product detailes',
+     type:#IDENTIFICATION_REFERENCE ,
+     targetElement: '_prod'
+     
+ }
+  
+ ]  
+
+
+@UI.lineItem: [{position: 10 , label: 'sales number'  }]
+@UI.identification: [{position: 10, label: 'sales number'  }]
+    Soid;
+@UI.lineItem: [{position: 20 , label: 'sales item number'  }] 
+@UI.identification: [{position: 20, label: 'item number'  }]   
+    ItemId;
+@UI.lineItem: [{position: 30 , label: 'product'  }]  
+@UI.identification: [{position: 30, label: 'product'  }]  
+    Product;
+@UI.lineItem: [{position: 40 , label: 'amount'  }]  
+@UI.identification: [{position: 40, label: 'amount'  }]  
+    Amount;
+@UI.lineItem: [{position: 50 , label: 'currency'  }]  
+@UI.identification: [{position: 50, label: 'currency'  }]  
+    Currency;
+@UI.lineItem: [{position: 60 , label: 'sales person'  }]    
+@UI.identification: [{position: 60, label: 'sales person'  }]
+    SalesPerson;
+ @UI.lineItem: [{position: 70 , label: 'sales time'  }]   
+ @UI.identification: [{position: 70, label: 'sales time'  }]
+    SalesTimestamp;
+@UI.lineItem: [{position: 80 , label: 'sales manager'  }]  
+@UI.identification: [{position: 80, label: 'sales manager'  }]  
+    SalesManager;
+@UI.lineItem: [{position: 90 , label: 'approval time'  }]  
+@UI.identification: [{position: 90, label: 'approval time'  }]  
+    ApprovalTimestamp;
+@UI.lineItem: [{position: 100 , label: 'sys user'  }]  
+@UI.identification: [{position: 100, label: 'sys user'  }]  
+    ChangedBy;
+@UI.lineItem: [{position: 110 , label: 'sys time'  }]  
+@UI.identification: [{position: 110, label: 'sys time'  }]  
+    ChangedOn;
+//    ImageItem;
+//    /* Associations */
+//    header;
+//    _prod;
+//    
+}
